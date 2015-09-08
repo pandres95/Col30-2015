@@ -7,10 +7,7 @@ module.exports = function () {
 
     return {
         find: function (req, res, next) {
-            json.promise(
-                dao.videos(req.query.part, req.query.lat, req.query.lng),
-                res, next
-            );
+            json.promise(dao.videos(req.query), res, next);
         }
     };
 
