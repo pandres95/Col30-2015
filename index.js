@@ -1,48 +1,44 @@
-/* jshint laxcomma: true, node: true */
 'use strict';
 
-var Q       = require('q')
-,   airbnb  = require('airapi')
-,   util    = require('util');
+/*
 
-function search(query) {
-    var defer = Q.defer();
-    airbnb.search(query, function (hostings) {
-        defer.resolve(hostings);
-    });
-    return defer.promise;
+Copyright (c) 2014 Bool Inc
+Bool Node.js MVC Framework
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+*/
+
+// Generate server
+require('./core/loader');
+var srv = require('./core/server')();
+
+var startServer = function(){
+    srv.server.listen(
+        srv.app.get('port'),
+        srv.app.get('host'),
+        function(){
+
+            console.log(
+                'Express server listening on http://%s:%d',
+                srv.app.get('host'),
+                srv.app.get('port')
+            );
+        }
+    );
+};
+
+if(process.env.NODE_ENV != 'test'){
+    startServer();
 }
 
-function process(hosting) {
-    var defer = Q.defer();
-    airbnb.info(hosting.getId(), function (info) {
-        defer.resolve(info);
-    });
-    return defer.promise;
-}
 
-console.info('Querying...');
-search({
-    location: 'Seattle, WA',
-    checkin: '07/03/2015',
-    checkout: '07/06/2015',
-    guests: 2,
-    page: 2,
-    ib: true
-}).then(function (hostings) {
-    console.info('Finding hosts...');
-    var qs = [];
-    for(var hosting in hostings){
-        qs.push(process(hostings[hosting]));
-    }
-    return Q.all(qs);
-}).then(function (hostings) {
-    console.info('Hosts found:');
-    for(var hosting in hostings){
-        console.log(
-            "(%d, %d)",
-            hostings[hosting].listing.lat,
-            hostings[hosting].listing.lng
-        );
-    }
-});
+module.name = "Col30";
+exports.app = app;
+exports.srv = srv;

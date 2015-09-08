@@ -1,0 +1,36 @@
+{
+    "400": {
+        "ExistingMail": {
+            "code":"existing_user_mail",
+            "message": {
+                "en": "The email you're trying to register belongs to another user",
+                "es": "El correo electrónico que está intentando registrar pertenece a otro usuario"
+            }
+        },
+        "ExistingUsername": {
+            "code":"existing_username",
+            "message": {
+                "en": "The username you're trying to register belongs to another user",
+                "es": "El nombre de usuario que está intentando registrar pertenece a otro usuario"
+            }
+        },
+        "InvalidRole": {
+            "code":"invalid_role",
+            "message": {
+                "en": "The specified role doesn't exist",
+                "es": "El rol especificado no existe"
+            }
+        }
+    },
+    "401": {
+        "InvalidPassword": {
+            "code": "invalid_credentials",
+            "message": {
+                "en": "Invalid password",
+                "es": "Contraseña inválida"
+            }
+        }
+    },
+    "404": {        
+    }
+}

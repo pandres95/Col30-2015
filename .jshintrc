@@ -1,0 +1,22 @@
+{
+    "node": true,
+    "laxcomma": true,
+    "undef": true,
+    "strict": true,
+    "unused": true,
+    "predef": [
+        "ExistingMailError",
+        "ExistingUsernameError",
+        "UserNotFoundError",
+        "ConferenceNotFoundError",
+        "EventNotFoundError",
+        "StreamNotFoundError",
+        "SurveyNotFoundError",
+        "InvalidPasswordError",
+        "InvalidRoleError",
+        "BoolError"
+    ],
+    "globals": {
+        "app": true
+    }
+}
