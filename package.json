@@ -8,7 +8,10 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "airapi": "git+http://github.com/phamtrisi/airapi.git",
+    "q": "^1.4.1"
+  },
   "devDependencies": {},
   "description": ""
 }
