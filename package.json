@@ -13,5 +13,13 @@
     "q": "^1.4.1"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandres95/Col30-2015.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pandres95/Col30-2015/issues"
+  },
+  "homepage": "https://github.com/pandres95/Col30-2015#readme",
   "description": ""
 }
