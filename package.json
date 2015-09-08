@@ -7,13 +7,12 @@
   },
   "keywords": [],
   "author": {
-      "name": "Pablo Andrés Dorado Suárez",
-      "mail": "im@pandres95.me"
+    "name": "Pablo Andrés Dorado Suárez",
+    "mail": "im@pandres95.me"
   },
   "license": "MIT",
   "dependencies": {
     "airapi": "git+http://github.com/phamtrisi/airapi.git",
-    "q": "^1.4.1",
     "bcryptjs": "^2.1.0",
     "body-parser": "^1.12.0",
     "express": "^4.12.2",
@@ -31,9 +30,11 @@
     "passport-http": "^0.2.2",
     "passport-http-bearer": "^1.0.1",
     "passport-oauth2-client-password": "^0.1.2",
+    "q": "^1.4.1",
     "route-pattern": "0.0.6",
     "tracer": "^0.7.3",
-    "underscore": "^1.8.2"
+    "underscore": "^1.8.2",
+    "youtube-api": "^1.1.0"
   },
   "devDependencies": {},
   "repository": {

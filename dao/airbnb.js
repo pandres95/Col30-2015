@@ -33,12 +33,8 @@ module.exports = function () {
             }).then(function (hostings) {
                 var places = [];
                 for(var hosting in hostings){
-                    places.push([
-                        hostings[hosting].listing.lat,
-                        hostings[hosting].listing.lng
-                    ]);
+                    places.push(hostings[hosting].listing);
                 }
-                app.utils.log.debug(places);
                 return places;
             });
         }
