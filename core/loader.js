@@ -15,6 +15,7 @@ var _               = require('underscore')
 ,   checkFields     = require("../utils/checkFields")
 
 ,   airbnb          = require('airapi')
+,   youtube         = require('youtube-api')
 
 ,   express         = require('express')
 ,   jsonfile        = require('jsonfile');
@@ -34,7 +35,8 @@ var utils = {
 
     formidable: formidable,
     checkFields: checkFields,
-    airbnb: airbnb
+    airbnb: airbnb,
+    youtube: youtube
 };
 
 function loadComponents(componentName){
